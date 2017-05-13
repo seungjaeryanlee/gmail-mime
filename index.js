@@ -2,6 +2,51 @@
 // Seung Jae (Ryan) Lee
 
 /**
+ * Returns the message ID of the MIME message.
+ * @param {object} mime - the MIME message 
+ * @return {string} id - the ID of the message
+ */
+exports.idOf = function(mime) {
+  return mime.id;
+}
+
+/**
+ * Returns the thread ID of the MIME message.
+ * @param {object} mime - the MIME message 
+ * @return {string} threadId - the thread ID of the message
+ */
+exports.threadIdOf = function(mime) {
+  return mime.threadId;
+}
+
+/**
+ * Returns the label IDs of the MIME message.
+ * @param {object} mime - the MIME message 
+ * @return {Array} labelIds - the array of labels the message has
+ */
+exports.labelIdsOf = function(mime) {
+  return mime.labelIds;
+}
+
+/**
+ * Returns true if the message is unread, false otherwise.
+ * @param {object} mime - the MIME message 
+ * @return {bool} isUnread - boolean denoting if the message is unread 
+ */
+exports.isUnread = function(mime) {
+  return mime.labelIds.indexOf('UNREAD') > -1;
+}
+
+/**
+ * Returns true if the message is important, false otherwise.
+ * @param {object} mime - the MIME message 
+ * @return {bool} isImportant - boolean denoting if the message is important 
+ */
+exports.isImportant = function(mime) {
+  return mime.labelIds.indexOf('IMPORTANT') > -1;
+}
+
+/**
  * Returns a Date object from the MIME message.
  * @param {object} mime - the MIME message 
  * @return {Date} date - the date message was sent
