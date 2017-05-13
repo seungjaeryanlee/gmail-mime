@@ -1,4 +1,5 @@
-// FIXME: Add File Header Comment
+// test.js
+// Seung Jae (Ryan) Lee
 
 gm = require('../index');
 var assert = require('assert');
