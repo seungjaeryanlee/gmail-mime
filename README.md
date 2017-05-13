@@ -20,7 +20,7 @@ google.gmail('v1').users.messages.list({
 }, function (err, res) {
 
   if (err) { console.log(err); }
-  else if (res && res.messages & res.messages.length >= 0) {
+  else if (res && res.messages && res.messages.length >= 0) {
     for(var i = 0; i < res.messages.length; i++) {
     	console.log(gm.subjectOf(res.messages[i]));
     }

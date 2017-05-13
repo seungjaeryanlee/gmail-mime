@@ -11,7 +11,7 @@
     "url": "git+https://github.com/sjlee235/gmail-mime.git"
   },
   "author": "Seung Jae (Ryan)",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/sjlee235/gmail-mime/issues"
   },

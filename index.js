@@ -91,30 +91,6 @@ exports.bodyOf = function(mime) {
   }
 
   return new Error('Unsupported MIME type');
-
-  // // Content-Type: text/plain
-  // if(mime.payload.mimeType === 'text/plain') {
-  //   raw = mime.payload.body.data;
-  // }
-
-  // // Content-Type: multipart/alternative
-  // else if(mime.payload.mimeType === 'multipart/alternative') {
-  //   raw = mime.payload.parts.find(x => x.mimeType === 'text/plain').body.data;
-  // }
-
-  // // Content-Type: multipart/related OR multipart/mixed
-  // else if(mime.payload.mimeType === 'multipart/related'
-  //      || mime.payload.mimeType === 'multipart/mixed') {
-  //   raw = mime.payload.parts.find(x => x.mimeType === 'multipart/alternative')
-  //                     .parts.find(x => x.mimeType === 'text/plain').body.data;
-  // }
-
-  // // Unrecognized Content-Type
-  // else {
-  //   return new Error('Unsupported MIME type');
-  // }
-
-  // return Buffer.from(raw, 'base64').toString('ascii').trim();
 }
 
 /**
