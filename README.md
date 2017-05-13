@@ -31,3 +31,6 @@ Returns the decoded HTML body of the MIME message.
 
 ### senderOf(mime)
 Returns the sender of the MIME message.
+
+### recipientOf(mime)
+Returns the recipient of the MIME message.
